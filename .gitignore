@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+*.nupkg
+appsettings*.json
+secrets.json
+Thumbs.db
+Desktop.ini
+node_modules/
