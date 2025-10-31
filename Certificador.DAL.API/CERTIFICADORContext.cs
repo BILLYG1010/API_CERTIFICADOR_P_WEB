@@ -14,11 +14,11 @@ public partial class CERTIFICADORContext : DbContext
     {
     }
 
-    public virtual DbSet<clienteapi> clienteapi { get; set; }
+    public virtual DbSet<ClienteAPI> clienteapi { get; set; }
 
-    public virtual DbSet<factura> factura { get; set; }
+    public virtual DbSet<Factura> factura { get; set; }
 
-    public virtual DbSet<facturacertificada> facturacertificada { get; set; }
+    public virtual DbSet<FacturaCertificada> facturacertificada { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,7 +26,7 @@ public partial class CERTIFICADORContext : DbContext
             .UseCollation("utf8mb4_0900_ai_ci")
             .HasCharSet("utf8mb4");
 
-        modelBuilder.Entity<clienteapi>(entity =>
+        modelBuilder.Entity<ClienteAPI>(entity =>
         {
             entity.HasKey(e => e.IdCliente).HasName("PRIMARY");
 
@@ -37,7 +37,7 @@ public partial class CERTIFICADORContext : DbContext
             entity.Property(e => e.EstadoCliente).HasDefaultValueSql("'1'");
         });
 
-        modelBuilder.Entity<factura>(entity =>
+        modelBuilder.Entity<Factura>(entity =>
         {
             entity.HasKey(e => e.IdFactura).HasName("PRIMARY");
 
@@ -52,7 +52,7 @@ public partial class CERTIFICADORContext : DbContext
                 .HasConstraintName("fk_fact_cliente");
         });
 
-        modelBuilder.Entity<facturacertificada>(entity =>
+        modelBuilder.Entity<FacturaCertificada>(entity =>
         {
             entity.HasKey(e => e.IdFacturaCertificada).HasName("PRIMARY");
 

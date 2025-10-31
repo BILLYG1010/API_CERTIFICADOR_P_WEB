@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Certificador.DAL.Api.Entities;
 
 [Index("NIT", Name = "uq_cliente_nit", IsUnique = true)]
-public partial class clienteapi
+public partial class ClienteAPI
 {
     [Key]
     public int IdCliente { get; set; }
@@ -38,5 +38,5 @@ public partial class clienteapi
     public DateTime ActualizadoEn { get; set; }
 
     [InverseProperty("IdClienteNavigation")]
-    public virtual ICollection<factura> factura { get; set; } = new List<factura>();
+    public virtual ICollection<Factura> factura { get; set; } = new List<Factura>();
 }

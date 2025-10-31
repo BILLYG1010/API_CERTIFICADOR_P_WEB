@@ -10,7 +10,7 @@ namespace Certificador.DAL.Api.Entities;
 
 [Index("NumeroAutorizacion", Name = "uq_autorizacion", IsUnique = true)]
 [Index("IdCliente", "IdempotenciaKey", Name = "uq_idem", IsUnique = true)]
-public partial class factura
+public partial class Factura
 {
     [Key]
     public int IdFactura { get; set; }
@@ -67,8 +67,8 @@ public partial class factura
 
     [ForeignKey("IdCliente")]
     [InverseProperty("factura")]
-    public virtual clienteapi IdClienteNavigation { get; set; }
+    public virtual ClienteAPI IdClienteNavigation { get; set; }
 
     [InverseProperty("IdFacturaNavigation")]
-    public virtual ICollection<facturacertificada> facturacertificada { get; set; } = new List<facturacertificada>();
+    public virtual ICollection<FacturaCertificada> facturacertificada { get; set; } = new List<FacturaCertificada>();
 }

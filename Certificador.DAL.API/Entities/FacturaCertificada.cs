@@ -11,7 +11,7 @@ namespace Certificador.DAL.Api.Entities;
 [Index("IdFactura", Name = "fk_facturacert_factura")]
 [Index("NumeroAutorizacion", Name = "uq_numero_autorizacion", IsUnique = true)]
 [Index("Serie", "Correlativo", Name = "uq_serie_correlativo", IsUnique = true)]
-public partial class facturacertificada
+public partial class FacturaCertificada
 {
     [Key]
     public int IdFacturaCertificada { get; set; }
@@ -34,5 +34,5 @@ public partial class facturacertificada
 
     [ForeignKey("IdFactura")]
     [InverseProperty("facturacertificada")]
-    public virtual factura IdFacturaNavigation { get; set; }
+    public virtual Factura IdFacturaNavigation { get; set; }
 }
