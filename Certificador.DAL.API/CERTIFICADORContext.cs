@@ -14,11 +14,11 @@ public partial class CERTIFICADORContext : DbContext
     {
     }
 
-    public virtual DbSet<ClienteAPI> clienteapi { get; set; }
+    public virtual DbSet<ClienteAPI> ClienteAPI { get; set; }
 
-    public virtual DbSet<Factura> factura { get; set; }
+    public virtual DbSet<Factura> Factura { get; set; }
 
-    public virtual DbSet<FacturaCertificada> facturacertificada { get; set; }
+    public virtual DbSet<FacturaCertificada> FacturaCertificada { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
