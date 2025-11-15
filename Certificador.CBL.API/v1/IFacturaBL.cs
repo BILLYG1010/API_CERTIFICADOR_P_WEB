@@ -12,7 +12,7 @@ namespace Certificador.CBL.Api.v1
         Task<List<FacturaDTO>> ObtenerTodos();
         Task<FacturaDTO> ObtenerPorId(int id);
         Task<FacturaDTO> CrearFactura(FacturaDTO factura);
-        Task<FacturaDTO> ActualizarFactura(FacturaDTO factura);
         Task<FacturaDTO> EliminarFactura(int idFactura);
+        Task<FacturaDTO> ActualizarFactura(FacturaDTO factura);
     }
 }

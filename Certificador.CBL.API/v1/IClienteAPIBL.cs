@@ -12,7 +12,7 @@ namespace Certificador.CBL.Api.v1
         Task<List<ClienteAPIDTO>> ObtenerTodos();
         Task<ClienteAPIDTO> ObtenerPorId(int id);
         Task<ClienteAPIDTO> CrearCliente(ClienteAPIDTO cliente);
-        Task<ClienteAPIDTO> ActualizarCliente(ClienteAPIDTO cliente);
         Task<ClienteAPIDTO> EliminarCliente(int idCliente);
+        Task<ClienteAPIDTO> ActualizarCliente(ClienteAPIDTO cliente);
     }
 }
