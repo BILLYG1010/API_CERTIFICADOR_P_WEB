@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Certificador.BSV.Api.v1
 {
-    public class CertificadorServiceV1 : ICertificadorServiceV1
+    public class CertificadorServiceV1 : ICertificadorServiceV1, ICertificadorProxyServiceV1
     {
         private readonly IClienteAPIBL _clienteBL;
         private readonly IFacturaBL _facturaBL;

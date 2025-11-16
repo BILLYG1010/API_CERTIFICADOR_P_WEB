@@ -20,6 +20,7 @@ namespace Certificador.BSV.Api.Config
             //Mapeo
             services.AddScoped<ICertificadorServiceV1, CertificadorServiceV1>();
             services.AddScoped<ICertificadorServiceV1, CertificadorServiceV1>();
+
             return services;
         }
 
@@ -30,7 +31,7 @@ namespace Certificador.BSV.Api.Config
             app.UseEndpoints(endpoints =>
             {
                 // Configura el endpoint SOAP usando la interfaz de servicio
-                endpoints.UseSoapEndpoint<ICertificadorServiceV1>
+                endpoints.UseSoapEndpoint<ICertificadorProxyServiceV1>
                 ("/CertificadorService.svc", new SoapEncoderOptions(),
                 SoapSerializer.DataContractSerializer);
             });
