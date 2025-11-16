@@ -17,7 +17,7 @@ namespace Certificador.BLL.Api.Config
         public static IServiceCollection AddBLLConfig(this IServiceCollection services)
 
         {
-            services.AddSqlServer<CERTIFICADORContext>($"Name={DBCONNECTION}");
+            
             services.AddAutoMapper(typeof(ConfigureMaps));
 
             services.AddScoped<IClienteAPIBL, ClienteAPIBL>();
